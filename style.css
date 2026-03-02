@@ -1,19 +1,84 @@
-*{
+/* Общие сбросы */
+* {
     margin: 0;
-    padding: 0%;
+    padding: 0;
+    box-sizing: border-box;
 }
-header{
-    width: 100%;
-    height: 80px;
-    background-color: blue;
-    color: wheat;
-    font-size: 24px;
+
+/* Шапка сайта */
+header {
+    background-color: #2b7fba; /* Фоновая заливка шапки */
+    color: white;              /* Цвет текста */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Распределение содержимого по краям */
+    align-items: center;       /* Центрирование по вертикали */
+    padding: 20px 30px;        /* Поля внутри шапки */
 }
-a{
-    margin: 30px;
-    text-decoration: none;
-    color: inherit;
+
+/* Логотип сайта */
+header h1 {
+    font-size: 28px;           /* Размер шрифта */
+    font-family: Arial, sans-serif; /* Тип шрифта */
+    letter-spacing: 1px;      /* Интервал между символами */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Легкая тень текста */
+    font-style: normal;        /* Прямой шрифт */
+}
+
+/* Список навигационных ссылок */
+nav ul {
+    list-style-type: none;     /* Скрываем стандартные маркеры списков */
+    display: flex;             /* Расположены в одну линию */
+}
+
+/* Отдельные пункты меню */
+nav li {
+    margin-right: 20px;        /* Межэлементный интервал */
+}
+
+/* Оформление ссылок меню */
+nav a {
+    color: white;              /* Белый цвет ссылок */
+    text-decoration: none;    /* Убираем подчеркивание */
+    transition: color 0.3s ease; /* Анимация смены цвета */
+    font-size: 20px;           /* Увеличенный размер текста ссылок */ /* <<< Изменено здесь */
+}
+
+/* Выделяем активную ссылку другим цветом */
+.active,
+nav a:hover {
+    color: #ffcc00;            /* Ярко-желтый цвет активного пункта меню */
+}
+
+/* Основная секция приветствия */
+#welcome-message {
+    max-width: 800px;          /* Ограничиваем максимальную ширину */
+    margin: 40px auto;         /* Горизонтальная центровка */
+    text-align: center;        /* Центруем текст */
+    font-size: 18px;           /* Удобный размер шрифта */
+}
+
+/* Общий стиль для контакта */
+#contact-info {
+    display: flex;                   /* Создаем flex-контейнер */
+    flex-direction: column;          /* Строки идут сверху вниз */
+    align-items: center;             /* Центрирование по горизонтали */
+    justify-content: center;         /* Центрирование по вертикали */
+    min-height: 50vh;                /* Минимальная высота для централизации */
+    text-align: center;              /* Центрация текста внутри блоков */
+    font-size: 18px;                 /* Удобный размер шрифта */
+    line-height: 1.6;                /* Междустрочный интервал */
+    padding-top: 50px;              /* Небольшой отступ сверху */
+}
+
+/* Заголовок страницы */
+#contact-info h2 {
+    font-size: 24px;                 /* Более крупный заголовок */
+    margin-bottom: 20px;             /* Пробел ниже заголовка */
+}
+
+/* Информация о контактах */
+address {
+    font-style: normal;              /* Стандартный шрифт */
+    max-width: 600px;                /* Ширина области для контактов */
+    word-wrap: break-word;           /* Перенос длинных строк */
 }
